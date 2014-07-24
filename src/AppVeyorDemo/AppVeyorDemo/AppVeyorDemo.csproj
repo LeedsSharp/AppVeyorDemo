@@ -63,7 +63,6 @@
     <Content Include="Content\appveyor_logo.png" />
     <Content Include="Content\nancy-logo.png" />
     <Content Include="favicon.ico" />
-    <Content Include="icon.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
