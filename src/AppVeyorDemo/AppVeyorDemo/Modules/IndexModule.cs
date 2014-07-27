@@ -6,10 +6,7 @@ namespace AppVeyorDemo.Modules
     {
         public IndexModule()
         {
-            Get["/"] = parameters =>
-            {
-                return View["index"];
-            };
+            Get["/"] = parameters => View["index"];
         }
     }
 }
