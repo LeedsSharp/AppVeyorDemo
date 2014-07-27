@@ -6,6 +6,7 @@
     using FluentAssertions;
     using Nancy;
     using Nancy.Testing;
+    using Nancy.ViewEngines.Razor;
     using NUnit.Framework;
 
     [TestFixture]
@@ -18,6 +19,7 @@
         {
             bootstrapper = new ConfigurableBootstrapper(with =>
             {
+                with.ViewEngine(new RazorViewEngine(new DefaultRazorConfiguration()));
                 with.Module<IndexModule>();
                 with.RootPathProvider<TestRootPathProvider>();
             });
