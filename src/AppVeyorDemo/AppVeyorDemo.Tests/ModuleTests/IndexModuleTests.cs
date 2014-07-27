@@ -1,15 +1,15 @@
-﻿namespace AppVeyorDemo.Tests
+﻿namespace AppVeyorDemo.Tests.ModuleTests
 {
+    using AppVeyorDemo;
     using AppVeyorDemo.Modules;
     using AppVeyorDemo.Tests.Utils;
     using FluentAssertions;
     using Nancy;
     using Nancy.Testing;
     using NUnit.Framework;
-    using AppVeyorDemo;
 
     [TestFixture]
-    public class ModuleTests
+    public class IndexModuleTests
     {
         private ConfigurableBootstrapper bootstrapper;
 
