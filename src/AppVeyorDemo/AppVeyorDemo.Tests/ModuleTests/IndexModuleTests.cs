@@ -51,7 +51,7 @@
             // Then
             result.Body["h1"]
                 .ShouldExistOnce()
-                .And.ShouldContain("Hello AppVeyor");
+                .And.ShouldContain("Hello");
         }
     }
 }
