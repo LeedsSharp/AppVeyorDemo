@@ -1,0 +1,18 @@
+# version format
+version: 0.1.{build}
+
+build:
+  publish_wap: true
+
+deploy:
+  - provider: Environment
+    name: AppVeyorDev
+  
+notifications:
+
+  # Slack
+  - provider: Slack
+    auth_token:
+      secure: VGb8A8TXT3lit5VKIWRcHPwffdjIMYcCiBFcnpSwb/Ax8Rm9yj0cA0F9Womr6kt6
+    channel: appveyor
+    template: "<{{buildUrl}}|Build {{projectName}} {{buildVersion}} {{status}}> Commit <{{commitUrl}}|{{commitId}}> by {{commitAuthor}} on {{commitDate}}: {{commitMessage}} :metal:"
