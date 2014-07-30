@@ -1,12 +1,23 @@
-﻿using Nancy;
-
-namespace AppVeyorDemo.Modules
+﻿namespace AppVeyorDemo.Modules
 {
+    using System.Configuration;
+    using AppVeyorDemo.Models;
+    using Nancy;
+
     public class IndexModule : NancyModule
     {
         public IndexModule()
         {
-            Get["/"] = parameters => View["index"];
+            Get["/"] = parameters =>
+            {
+                var model = new IndexViewModel
+                {
+                    HelloName = "AppVeyor",
+                    ServerName = ConfigurationManager.AppSettings["Server_Name"]
+                };
+
+                return View["index", model];
+            };
         }
     }
 }
