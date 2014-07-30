@@ -67,6 +67,7 @@
     <Content Include="Content\appveyor_logo.png" />
     <Content Include="Content\nancy-logo.png" />
     <Content Include="favicon.ico" />
+    <Content Include="Parameters.xml" />
     <Content Include="Views\index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -74,11 +75,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppVeyorBootstrapper.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Modules\IndexModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
