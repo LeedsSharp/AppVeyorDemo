@@ -1,8 +1,12 @@
+
 # version format
 version: 0.1.{build}
 
 build:
   publish_wap: true
+  
+  # MSBuild verbosity level
+  verbosity: minimal
 
 deploy:
   - provider: Environment
