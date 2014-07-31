@@ -12,7 +12,7 @@
             {
                 var model = new IndexViewModel
                 {
-                    HelloName = "Leeds#",
+                    HelloName = "AppVeyor",
                     ServerName = ConfigurationManager.AppSettings["Server_Name"]
                 };
 
